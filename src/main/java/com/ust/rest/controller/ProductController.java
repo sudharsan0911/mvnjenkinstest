@@ -45,7 +45,7 @@ public class ProductController {
 		logger.info("entered post method" + product);
 		Product savedProduct = service.addProduct(product);
 		logger.info("product posted "+savedProduct);
-		return ResponseEntity.status(HttpStatus.OK).body(savedProduct);
+		return ResponseEntity.ok(savedProduct);
 		
 	}	
 	@GetMapping(value="/productsinfo",produces = MediaType.APPLICATION_JSON_VALUE)
